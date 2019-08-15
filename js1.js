@@ -17,7 +17,7 @@ Create a function named myFunctionOne that returns the number 3.
 
 //Concept 2
 function myFunctionOne() {
-
+    
 }
 
 /*
@@ -44,46 +44,5 @@ Create a function named myFunctionFour with two parameters that returns their su
 //Concept 5
 
 
-
 //TESTING FUNCTIONS - DO NOT TOUCH ANYTHING BELOW THIS POINT
-function Tests() {
-    let total = 5;
-    let correct = 0;
-    if (typeof t1 === 'number' && typeof t2 === 'string' && typeof t3 === 'boolean' && Array.isArray(t4)) {
-        console.log('CONCEPT 1 - PASS');
-        correct++;
-    }        
-    else
-        console.log('CONCEPT 1 - FAIL');    
-
-    if (myFunctionOne() === 3) {
-        console.log('CONCEPT 2 - PASS');
-        correct++;
-    }        
-    else
-        console.log('CONCEPT 2 - FAIL');
-
-    if (myFunctionTwo(3, 8) === 11 && myFunctionTwo(-4, 16) === 12) {
-        console.log('CONCEPT 3 - PASS');
-        correct++;
-    } else {
-        console.log('CONCEPT 3 - FAIL');
-    }
-
-    if (myFunctionThree(4, 3, 2) === 24 && myFunctionThree(-2, 2, 2) === -8) {
-        console.log('CONCEPT 4 - PASS');
-        correct++;
-    } else {
-        console.log('CONCEPT 4 - FAIL');
-    }
-
-    if (myFunctionFour(2, 100) === 102 && myFunctionFour(0, 3) === false) {
-        console.log('CONCEPT 5 - PASS');
-        correct++;
-    } else {
-        console.log('CONCEPT 5 - FAIL');
-    }
-
-    console.log(`You scored ${correct / total * 100}`);
-}
-Tests();
+module.exports = { myFunctionOne, myFunctionTwo, myFunctionThree, myFunctionFour }
