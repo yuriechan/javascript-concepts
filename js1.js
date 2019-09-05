@@ -8,7 +8,7 @@ t4 - array
 */
 
 //Concept 1
-var x = 0;
+var x = 0
 
 /*
 Concept 2 - Simple Function Returns
