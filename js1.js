@@ -52,7 +52,7 @@ Create a function named myFunctionFour with two parameters that returns their su
 //Concept 5
 function myFunctionFour(num1, num2){
     // Direction slightly unclear, assuming that if either is zero the return value should be false
-    if (num1*num2 == 0){
+    if (num1*num2 === 0){
         return false;
     }
     return num1+num2;

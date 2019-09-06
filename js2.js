@@ -18,11 +18,7 @@ Create a function called myFunctionTwo with one parameter that counts the number
 
 //Concept 2
 function myFunctionTwo(arr){
-    var count = 0;
-    arr.forEach(element => {
-        count ++;
-    });
-    return count;
+    return arr.length;
 }
 
 /* Concept 3 - Nested Loops
@@ -36,10 +32,7 @@ Return: 'onetwothree'
 
 //Concept 3
 function myFunctionThree(arr){
-    var result = "";
-    arr.forEach(element => {
-        result = result.concat(element);
-    });
+    var result = arr.join("");
     return result;
 }
 
@@ -68,13 +61,13 @@ Return: [2, 4, 6]
 
 //Concept 5
 function myFunctionFive(arr){
-    var newArray = [];
-    arr.forEach(element => {
-        if (element%2 == 0){
-            newArray.push(element);
+    for (i = 0; i < arr.length; i++){
+        if (arr[i] % 2 === 1){
+            arr.splice(i, 1);
         }
-    });
-    return newArray;
+    }
+
+    return arr;
 }
 
 
