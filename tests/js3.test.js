@@ -42,5 +42,6 @@ describe('JavaScript Concepts 3', () => {
             expect(testStudent.getMajor()).toBe('Pseudoscience')
         })
     })
-    //Write your test here!
+    //Write your test here! Just follow the pattern for making a describe,
+    //test, expect, and toBe.
 })
