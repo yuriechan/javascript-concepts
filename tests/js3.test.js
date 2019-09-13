@@ -1,4 +1,4 @@
-const { myPerson, objectExtend, Student } = require('../js3')
+const { myPerson, objectExtend, Student, functionInAFunction } = require('../js3')
 
 describe('JavaScript Concepts 3', () => {
     describe('Concept 1', () => {
@@ -44,4 +44,16 @@ describe('JavaScript Concepts 3', () => {
     })
     //Write your test here! Just follow the pattern for making a describe,
     //test, expect, and toBe.
+
+    describe('Concept 4', () => {
+        function testFunction(){return 42}
+        const testFunctionResult = functionInAFunction(testFunction)
+        test('should return 42', () => {
+            expect(testFunctionResult).toBe(42)
+        })
+    })
+
+    // Kept getting stuck on an error when I tried to write line 52 as :  expect(functionInAFunction(testFunction())).toBe(42).
+    // The error was : "TypeError: otherFunction is not a function", couldn't make sense of it but the separate variable seems to have fixed it.  What am I misunderstanding here?
+
 })
