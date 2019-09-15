@@ -52,7 +52,4 @@ describe('JavaScript Concepts 3', () => {
         })
     })
 
-    // Kept getting stuck on an error when I tried to write line 52 as :  expect(functionInAFunction(testFunction())).toBe(42).
-    // The error was : "TypeError: otherFunction is not a function", couldn't make sense of it but the separate variable seems to have fixed it.  What am I misunderstanding here?
-
 })
