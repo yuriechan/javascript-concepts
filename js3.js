@@ -10,7 +10,14 @@ function objectExample() {
 
 //Create a function called myPerson that takes in three parameters and then returns a new object containing the parameters as properties.
 function myPerson(name, age, gender) {
+    const person = {
+        name: name,
+        age: age,
+        gender: gender
+        // Does this work?  And is it bad practice?  
+    }
 
+    return person
 }
 
 //Concept 2 - Immutability
@@ -20,8 +27,11 @@ function myPerson(name, age, gender) {
 //Create a function called objectExtend that takes in an object, adds a 'checked: true' key/value, and returns it
 //as a new object, not mutating the input.
 
-function objectExtend() {
+function objectExtend(object) {
+    newObject = Object.assign({}, object) 
+    newObject.checked = true
 
+    return newObject
 }
 
 //Concept 3 - Classes
@@ -55,6 +65,24 @@ car2.getModel() //returns 'Camry'
 //the given argument.
 
 class Student {
+    constructor(name, age, major) {
+        this.school = 'Fake University'
+        this.name = name
+        this.age = age
+        this.major = major
+    }
+
+    getName() {
+        return this.name
+    }
+
+    getMajor() {
+        return this.major
+    }
+
+    changeMajor(newMajor) {
+        this.major = newMajor
+    }
 
 }
 
@@ -143,4 +171,10 @@ a(() => {
 //and returns the result. Then, create a test in js3.test.js that tests it and use
 //the anonymous function to invoke it.
 
-module.exports = { myPerson, objectExtend, Student }
+function functionInAFunction(otherFunction){
+    return otherFunction()
+}
+
+// Not certain what an anonymous function is, I hope this is correct.
+
+module.exports = { myPerson, objectExtend, Student, functionInAFunction }

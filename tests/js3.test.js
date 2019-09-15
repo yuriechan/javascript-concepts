@@ -1,4 +1,4 @@
-const { myPerson, objectExtend, Student } = require('../js3')
+const { myPerson, objectExtend, Student, functionInAFunction } = require('../js3')
 
 describe('JavaScript Concepts 3', () => {
     describe('Concept 1', () => {
@@ -44,4 +44,12 @@ describe('JavaScript Concepts 3', () => {
     })
     //Write your test here! Just follow the pattern for making a describe,
     //test, expect, and toBe.
+
+    describe('Concept 4', () => {
+        function testFunction(){return 42}
+        test('should return 42', () => {
+            expect(functionInAFunction(testFunction)).toBe(42)
+        })
+    })
+
 })
