@@ -47,9 +47,8 @@ describe('JavaScript Concepts 3', () => {
 
     describe('Concept 4', () => {
         function testFunction(){return 42}
-        const testFunctionResult = functionInAFunction(testFunction)
         test('should return 42', () => {
-            expect(testFunctionResult).toBe(42)
+            expect(functionInAFunction(testFunction)).toBe(42)
         })
     })
 
