@@ -50,7 +50,7 @@ Create a function named myFunctionFour with two parameters that returns their su
 
 //Concept 5
 function myFunctionFour(x, y) {
-    if ((x || y) === 0) {
+    if (!x || !y) {
         return false
     } else {
         return x + y
