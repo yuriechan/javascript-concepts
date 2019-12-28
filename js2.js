@@ -5,9 +5,12 @@ Create a function called myFunctionOne that returns the sum of all values of an 
 //Concept 1
 function myFunctionOne(arr) {
     let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum = sum + arr[i]
-    }
+    // for (let i = 0; i < arr.length; i++) {
+    //     sum = sum + arr[i]
+    // }
+    // Using forEach is shorter
+    // arr.forEach((item) => sum = sum + item)
+    arr.forEach((item) => sum += item)
     return sum
 }
 
@@ -18,9 +21,12 @@ Create a function called myFunctionTwo with one parameter that counts the number
 
 //Concept 2
 function myFunctionTwo(arr) {
-    let counter = 0;
-    counter = arr.length > 0 ? arr.length : 0
-    return counter
+    // let counter = 0;
+    // counter = arr.length > 0 ? arr.length : 0
+    // return counter
+
+    // simply do this
+    return arr.length
 }
 
 /* Concept 3 - Nested Loops
@@ -35,7 +41,9 @@ Return: 'onetwothree'
 //Concept 3
 function myFunctionThree(arr) {
     let longString = ''
-    longString = arr.join().replace(/,/g,"")
+    // longString = arr.join().replace(/,/g,"")
+    // Use separator inside join method
+    longString = arr.join("")
     return longString
 }
 
@@ -63,9 +71,17 @@ Return: [2, 4, 6]
 
 //Concept 5
 function myFunctionFive(arr) {
-    let evenNumArr = [];
-    arr.forEach((item) => {if (item%2 === 0) evenNumArr.push(item)})
-    return evenNumArr
+    // let evenNumArr = [];
+    // arr.forEach((item) => {if (item%2 === 0) evenNumArr.push(item)})
+    // return evenNumArr
+
+    // changing original array seems to use less memory
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]%2 !== 0) {
+            arr.splice(i, 1)
+        }
+    }
+    return arr
 }
 
 
