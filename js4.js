@@ -17,8 +17,19 @@ function onEvery(arr, func){
 //Create a function that takes in a number and an infinite number of 
 //functions, runs all the functions on the single number, then returns it.
 
-function marathon(num, funcOne, funcTwo, funcThree){
-    return funcThree(funcTwo(funcOne(num)))
+// This is not scalable, since it has only three functions as an argument 
+// function marathon(num, funcOne, funcTwo, funcThree){
+//     return funcThree(funcTwo(funcOne(num)))
+// }
+
+//Assume that random number of functions will be passed, and using spread operator is the way to go.
+//Spread operator allows iterable (an Object which one can iterate over) to expand in places where >0 arguments are expected
+
+function marathon(num, ...functions) {
+    for (let i = 0; i < functions.length; i++) {
+        num = functions[i](num)
+    }
+    return num
 }
 
 module.exports = { onEvery, marathon }
